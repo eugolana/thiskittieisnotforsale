@@ -1,0 +1,69 @@
+<html>
+	<head>
+		<title>This Kittie is Not For Sale!</title>
+		<link rel="stylesheet" type="text/css" href="main.css">
+		<script type="text/javascript" src="scripts/cryptokittiesabi.js"></script>
+		<script type="text/javascript" src="scripts/watchTransfers.js"></script>
+		<script type="text/javascript"  src="scripts/app.js" ></script>
+	</head>
+	<body>
+		<main>
+		<!-- <canvas id="myCanvas" resize></canvas> -->
+		<!-- <img src="#" id="catPics" height="100" width="100"/> -->
+		<div id="titles">
+			<div id="titlecontent">
+	
+				<p>CryptoKitties, the latest craze to conquer the cryptoverse, represents a new low of digital depravity.</p>
+
+				<p>Commodified Kittens are cynically summoned into existence for the sole purpose of trade, speculation, and profit. These cats are then forced to breed in the hope of acquiring rare and allegedly desirable "cattributes" in their offspring, which will be torn away from their parents, and sold at market.</p>
+
+				<p>As I write, thousands of transactions have taken place and cats have sold for a total of over $8 million.</p>
+
+				<p>This website aims to give a voice to the voiceless.</p>
+
+				<p>Using cutting edge genetic analysis and the Web Audio API, the mortified mews of marketised mogs are reconstructed in real-time as they are chucked across cyberspace in exchange for cryptocurrency. </p>
+
+				<p>Hang around a while, listen to the fear, the suffering, that has come to define these little fluffy lives.</p>
+
+				<p>Now is the time to take a stand against this cruel trade. </p>
+
+				<p>A cat is not an investment.</p>
+
+				<p> A cat is not a commodity.</p>
+
+
+				<p>Say it loud and say it proud: </p>
+
+				<p>THIS KITTIE IS NOT FOR SALE!</p>
+
+			</div>
+		</div>
+		</main>
+		<div id="eugolana">
+			<p>Produced by <a href="http://eugolana.com">eugolana</a></p>
+			<p>Source Code <a href="http://github.com/eugolana/thiskittieisnotforsale">here</a></p>
+			<div class="tip-button">
+				<br/>
+				<p>Like this? Send me a donation!</p>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var tipButton = document.querySelector('.tip-button')
+		tipButton.addEventListener('click', function() {
+		  if (typeof web3 === 'undefined') {
+		  	console.log('you need metamask running and logged in ot the mainnet to donate to me :(')
+		  }
+
+		  var user_address = web3.eth.accounts[0]
+		  web3.eth.sendTransaction({
+		    to: "0xe50776b3cB66cb66431dbcD4BA217B483A7bF850",
+		    from: user_address,
+		    value: web3.toWei('0.01', 'ether'),
+		  }, function (err, transactionHash) {
+		  	console.log('whoop! transaction failed..')
+		  })
+		})
+	</script>
+
+</html>
